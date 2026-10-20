@@ -50,4 +50,4 @@ Rows were matched to header channels BY NAME, never by position (exact; then cas
 
 Add sub-RESP0724 ses-1 coordsystem.json (Other/mm, as the 5 other subjects) (proposal A1, Lane G round 4). Evidence: The deposit's 5 other subjects (same RESPect pipeline, same *_electrodes.json text) declare exactly this Other / mm coordsystem; their IntendedFor names proc-deface but the T1w files are rec-deface, so rec-deface is used here.
 
-Full evidence per dataset: REPORT-ieeg-locations.md and ieeg_locations.json (Lane G, 19 Oct 2026). This dataset mirrors OpenNeuro; the same change belongs upstream. Local branch only.
+The evidence for this change is stated in this section (the dataset's own files, the cited paper and the identical sibling deposits named above). This dataset mirrors OpenNeuro; the same change belongs upstream.
