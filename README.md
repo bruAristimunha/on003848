@@ -46,8 +46,6 @@ In 2 recordings the channel list of channels.tsv did not equal the data-file hea
 
 Rows were matched to header channels BY NAME, never by position (exact; then case/whitespace; then the recorder prefix 'EEG '/'POL ', '_' and zero padding; then a trailing '-<reference>' token). Matched rows keep all their columns (type, units, status, ...); 2 rows took the header name.
 
-## Electrode locations (19 Oct 2026)
+## Electrode locations (19 Oct 2026; revised 22 Oct 2026)
 
-Add sub-RESP0724 ses-1 coordsystem.json (Other/mm, as the 5 other subjects) (proposal A1, Lane G round 4). Evidence: The deposit's 5 other subjects (same RESPect pipeline, same *_electrodes.json text) declare exactly this Other / mm coordsystem; their IntendedFor names proc-deface but the T1w files are rec-deface, so rec-deface is used here.
-
-The evidence for this change is stated in this section (the dataset's own files, the cited paper and the identical sibling deposits named above). This dataset mirrors OpenNeuro; the same change belongs upstream.
+sub-RESP0724 ses-1 has an electrodes.tsv but, in the deposit, no coordsystem.json. This branch adds one that declares `Other` / `mm` and states its limitation in `iEEGCoordinateSystemDescription`: the frame of this subject's positions is not documented in the deposit or the cited paper (the five other subjects declare an individual RAS frame; this subject may use the same frame, but that is not confirmed); no anatomical image is associated (no `IntendedFor`); and `mm` is inferred from the spread of the positions, which is physically plausible only in millimetres. No coordinate value changed. This dataset mirrors OpenNeuro; the same change belongs upstream.
